@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Home Veterinary Consultation",
+    "description": "We send a veterinarian to your home to examine your sick pet.",
+    "keywords": ["home visit", "vet at home", "sick", "ill", "not eating", "tired", "vomit", "vomiting", "throwing up"]
+  },
+  {
+    "title": "Clinic Visit",
+    "description": "Comprehensive check-up and diagnosis at the clinic for urgent cases.",
+    "keywords": ["clinic", "urgent", "examination", "visit", "serious", "check-up", "vomit", "throw up", "diarrhea"]
+  },
+  {
+    "title": "Behavioral Diagnosis",
+    "description": "Analyze and correct fearful or aggressive pet behavior.",
+    "keywords": ["aggressive", "fearful", "biting", "behavior", "anxiety", "training", "weird", "strange", "odd", "unusual", "off"]
+  },
+  {
+    "title": "Pet Walking",
+    "description": "Pet walking service by professional trainers.",
+    "keywords": ["walk", "exercise", "outside", "trainer", "walker"]
+  },
+  {
+    "title": "Emergency Pet Transport",
+    "description": "Fast and safe transport to the nearest veterinary hospital in critical situations.",
+    "keywords": ["emergency", "ambulance", "hospital", "critical", "injury", "transport"]
+  },
+  {
+    "title": "Pet Grooming",
+    "description": "Full grooming service including bathing, nail trimming, and fur trimming for dogs and cats.",
+    "keywords": ["grooming", "bath", "haircut", "nails", "trim", "clean"]
+  },
+  {
+    "title": "Vaccination Appointment",
+    "description": "Schedule a vaccination session to keep your pet protected against common diseases.",
+    "keywords": ["vaccine", "vaccination", "shots", "prevent", "disease", "appointment"]
+  },
+  {
+    "title": "Pet Nutrition Consultation",
+    "description": "Personalized dietary advice based on your pet’s breed, age, and health condition.",
+    "keywords": ["nutrition", "diet", "food", "eating", "overweight", "underweight"]
+  },
+  {
+    "title": "Puppy Training Classes",
+    "description": "Group training sessions to teach puppies basic obedience and socialization skills.",
+    "keywords": ["puppy", "training", "barking", "chewing", "obedience", "behavior"]
+  },
+  {
+    "title": "Senior Pet Wellness Check",
+    "description": "Routine exams tailored for aging pets to detect early signs of chronic illnesses.",
+    "keywords": ["senior", "old", "aging", "arthritis", "check", "wellness"]
+  },
+  {
+    "title": "Pet Sitting Service",
+    "description": "A trusted sitter takes care of your pet at your home while you’re away.",
+    "keywords": ["pet sitting", "sitter", "look after", "watch", "vacation", "boarding"]
+  },
+  {
+    "title": "Pet Travel Documentation",
+    "description": "Help with paperwork and health checks needed for pet international travel.",
+    "keywords": ["travel", "flight", "documents", "passport", "abroad", "paperwork"]
+  },
+  {
+    "title": "Dental Cleaning for Pets",
+    "description": "Professional dental care to keep your pet’s teeth and gums healthy.",
+    "keywords": ["dental", "teeth", "cleaning", "mouth", "gums", "bad breath"]
+  },
+  {
+    "title": "Pet Loss Counseling",
+    "description": "Compassionate support and counseling after the loss of a beloved pet.",
+    "keywords": ["grief", "loss", "mourning", "dead", "counseling", "support"]
+  }
+]
