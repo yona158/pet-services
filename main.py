@@ -69,16 +69,16 @@ def get_pet_service_from_query(user_query: str) -> dict:
 pet_services = {
     "name": "get_pet_service_from_query",
     "description": (
-        "Use this tool when a user describes a pet-related need or situation that might require a service. "
-        "This includes travel, illness, behavior problems, grooming, sitting, or general care. "
-        "Always use this tool when the user asks for help without naming a specific service."
+        "Call this tool when a user describes a pet-related issue or request (e.g. walking, grooming, illness, travel). "
+        "It analyzes the user's message and returns the most relevant matching service from our database, including the service title and a short description."
     ),
+
     "parameters": {
         "type": "object",
         "properties": {
             "user_query": {
                 "type": "string",
-                "description": "A short user message describing their pet's issue or need, like 'my dog is aggressive'."
+                "description": "Summarize the user's request as a clear keyword or phrase (like 'dog walking', 'pet grooming'). Avoid full sentences. Add keywords when it is necessary"
             },
         },
         "required": ["user_query"],
@@ -87,6 +87,11 @@ pet_services = {
 
 tools = types.Tool(function_declarations=[pet_services])
 config = types.GenerateContentConfig(tools=[tools])
+
+contents = []
+contents.append(types.Content(role="system", parts=[
+    types.Part(text="You are a helpful veterinary assistant. Use the function when users describe pet issues. After a function result is returned, explain the matched service in friendly natural language.")
+]))
 
 # Main loop
 def chat():
@@ -114,7 +119,7 @@ def chat():
 
             if hasattr(part, "function_call") and part.function_call:
                 tool_call = part.function_call
-
+                print("tool_call.args:",tool_call.args)
                 result = get_pet_service_from_query(**tool_call.args)
 
                 # function_response_part = types.Part.from_function_response(
@@ -141,7 +146,7 @@ def chat():
                     contents=contents,
                 )
 
-                print("\nGemini:", final_response.text)
+                print("\nGemini (via function call):", final_response.text)
                 contents.append(final_response.candidates[0].content)
 
             else:  
@@ -165,7 +170,7 @@ def chat():
                     contents=contents,
                 )
 
-                print("\nGemini:", friendly_response.text)
+                print("\nGemini (without function call):", friendly_response.text)
                 contents.append(friendly_response.candidates[0].content)
 
         except Exception as e:
